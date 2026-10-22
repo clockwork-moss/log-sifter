@@ -1,0 +1,5 @@
+2026-10-22T08:00:00Z INFO user=operator session started
+2026-10-22T08:00:01+00:00 WARNING user=batch_worker queue nearing capacity
+2026-10-22T08:00:02Z ERROR user=batch_worker connection timed out
+2026-10-22T08:00:04Z INFO user=operator retry succeeded
+unstructured continuation from legacy exporter

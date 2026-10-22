@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "log-sifter"
+version = "1.0.0"
+description = "Stream structured text logs into filtered reports"
+requires-python = ">=3.11"
+dependencies = []
+[project.scripts]
+log-sifter = "log_sifter:main"
+[tool.setuptools]
+py-modules = ["log_sifter"]
