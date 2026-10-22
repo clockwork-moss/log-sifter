@@ -2,7 +2,7 @@
 import argparse,csv,json,re,sys
 from datetime import datetime
 PATTERN=re.compile(r'^(\S+)\s+(DEBUG|INFO|WARNING|ERROR|CRITICAL)\s+(.*)$')
-USER=re.compile(r'\buser=([A-Za-z0-9-]+)\b')
+USER=re.compile(r'\buser=([A-Za-z0-9_-]+)\b')
 def parse_line(line):
     match=PATTERN.match(line.strip())
     if not match: return None

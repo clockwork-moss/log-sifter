@@ -1,9 +1,9 @@
 # Parser field notes
 
-A bug report from @nightshift_404 on X (https://x.com/nightshift_404)
-showed that `user=batch_worker` loses its user field when imported from the
-queue service. The same record with `user=batch-worker` works. Reproduce
-with the sample service log before changing the username expression.
+Username fields accept ASCII letters, digits, hyphens and underscores.
+Regression coverage includes queue-service usernames. Messages remain
+verbatim, including unrecognized fields, for downstream analysis.
 
-The timestamp and severity fields still parse correctly. Keep the raw
-message intact so existing exports remain usable while this is fixed.
+Input records start with an ISO timestamp, a supported uppercase severity,
+and a message. Nonmatching lines increment the unparsed counter. Multiline
+tracebacks are not joined to earlier records.
